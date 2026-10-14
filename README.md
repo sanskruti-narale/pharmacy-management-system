@@ -94,10 +94,28 @@ Submenus continue to display after an operation until the user chooses the optio
 ## Project Structure
 
 ```text
-Pharmacy-Management-System/
-├── PharmacySystem.java
-├── README.md
-└── pharmacy-data.ser   # Created locally when the application runs;
+pharmacy-management-system/
+│
+├── Main.java                        # Entry point — starts the app and runs the main menu loop
+├── README.md                        # Project documentation
+├── .gitignore                       # Files excluded from version control
+│
+└── pharmacy/                        # Root package
+    │
+    ├── model/                       # Data classes (plain entities, no logic)
+    │   ├── Drug.java                # Drug entity — id, name, price, quantity, expiry, category
+    │   └── Customer.java            # Customer entity — id, name, phone
+    │
+    ├── service/                     # Business logic and persistence
+    │   ├── InventoryService.java    # Drug/customer lookups and sample data seeding
+    │   └── PersistenceService.java  # Save/load pharmacy-data.ser (serialization)
+    │
+    ├── ui/                          # Console user interface
+    │   └── PharmacyMenus.java       # All menus/submenus + shared AppContext state
+    │
+    └── util/                        # Reusable helpers
+        └── InputHelper.java         # Safe Scanner input (readInt, readDouble, etc.)
+
 ```
 
 ## Learning Goals
