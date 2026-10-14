@@ -1,0 +1,27 @@
+# ---- Java compiled output ----
+*.class
+
+# ---- Runtime / serialized data ----
+*.ser
+pharmacy-data.ser
+
+# ---- Build directories ----
+/out/
+/build/
+/bin/
+/target/
+
+# ---- IDE / editor ----
+.idea/
+*.iml
+.vscode/
+.settings/
+.classpath
+.project
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+
+# ---- Logs ----
+*.log
